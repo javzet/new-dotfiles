@@ -9,6 +9,10 @@ disabled = #707880
 
 [bar/bar1]
 
+; Add to your .zshrc or .bashrc the next line to use 
+; this environtment variable:
+; export PRIMARY_MONITOR="$(xrandr -q | grep " connected primary" | cut -d ' ' -f1)"
+
 monitor = ${env:PRIMARY_MONITOR}
 monitor-fallback = false
 monitor-exact = true
